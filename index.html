@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ruthveek Gourishetty — Portfolio</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<link rel="shortcut icon" href="favicon (2).png" type="image/x-icon">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">RG.</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-social">
+    <a href="https://www.linkedin.com/in/ruthveek-gourishetty-435154264" target="_blank" class="nav-social-link">
+      <i class="bi bi-linkedin"></i>
+    </a>
+    <a href="https://github.com/Grshetty" target="_blank" class="nav-social-link">
+      <i class="bi bi-github"></i>
+    </a>
+  </div>
+  <button class="mobile-menu-toggle">☰</button>
+</nav>
+<div class="mobile-menu-overlay"></div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-orb1"></div>
+  <div class="hero-orb2"></div>
+  <div class="hero-orb3"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Available for opportunities</div>
+    <div class="hero-name">
+      <div class="line1">Ruthveek</div>
+      <div class="line2">Gourishetty</div>
+    </div>
+    <div class="hero-subtitle">Junior Front-End Developer</div>
+    <div class="typewriter-wrap">
+      <span id="tw-text"></span><span id="tw-cursor"></span>
+    </div>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary-custom">Let's Connect</a>
+      <a href="#projects" class="btn-outline-custom">View Projects</a>
+    </div>
+    <div class="hero-contacts">
+      <span class="cpill">+91-7981227221</span>
+      <span class="cpill">ruthveekgourishetty@gmail.com</span>
+      <span class="cpill">Kamareddy, Telangana</span>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-dark">
+  <div class="container-fluid px-0">
+    <div class="sec-header reveal">
+      <div class="sec-number">01 — About</div>
+      <h2 class="sec-title">Who I Am</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-7">
+        <p class="about-text reveal reveal-delay-1" style="max-width: 100%;">
+          I'm a <strong>Junior Front-End Developer</strong> with hands-on experience building <strong>responsive, user-friendly web applications</strong> using modern technologies like React, Tailwind CSS, and JavaScript.<br><br>
+          I thrive on creating clean UI components, interactive interfaces, and continuously pushing the boundaries of what's possible in the browser. Currently working at <strong>SecurXperts Technologies</strong>, where I bring designs to life every day.
+        </p>
+      </div>
+      <div class="col-lg-5 reveal reveal-delay-2">
+        <div class="about-widget">
+          <div class="widget-header">
+            <div class="widget-dot red"></div>
+            <div class="widget-dot yellow"></div>
+            <div class="widget-dot green"></div>
+            <span class="widget-title">ruthveek.config</span>
+          </div>
+          <div class="widget-body">
+            <div class="widget-info-row">
+              <span class="widget-key">CURRENT_ROLE</span>
+              <span class="widget-val val-role">Junior Front-End Developer</span>
+            </div>
+            <div class="widget-info-row">
+              <span class="widget-key">COMPANY</span>
+              <span class="widget-val val-company">SecurXperts Technologies</span>
+            </div>
+            <div class="widget-info-row">
+              <span class="widget-key">LOCATION</span>
+              <span class="widget-val">Kamareddy, TS, India</span>
+            </div>
+            <div class="widget-info-row">
+              <span class="widget-key">INTERESTS</span>
+              <span class="widget-val">Responsive &amp; User-Friendly Web Development</span>
+            </div>
+            <div class="widget-status">
+              <div class="status-indicator-ping"></div>
+              <span class="status-text">Ready to Build Something Amazing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section-mid">
+  <div class="container-fluid px-0">
+    <div class="sec-header reveal">
+      <div class="sec-number">02 — Skills</div>
+      <h2 class="sec-title">Technical Arsenal</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="skill-category reveal reveal-delay-1">
+      <div class="skill-cat-label">Frontend Development</div>
+      <div class="skills-row" id="fe-skills"></div>
+    </div>
+    <div class="skill-category reveal reveal-delay-2">
+      <div class="skill-cat-label">Backend Integration</div>
+      <div class="skills-row" id="bi-skills"></div>
+    </div>
+    <div class="skill-category reveal reveal-delay-3">
+      <div class="skill-cat-label">Database &amp; Tools</div>
+      <div class="skills-row" id="db-skills"></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section-dark">
+  <div class="container-fluid px-0">
+    <div class="sec-header reveal">
+      <div class="sec-number">03 — Experience</div>
+      <h2 class="sec-title">Work History</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="exp-card reveal reveal-delay-1">
+      <div class="exp-company">SecurXperts Technologies Pvt Ltd</div>
+      <div class="exp-role">Junior Front-End Developer</div>
+      <div class="exp-period">July 2025 — Present</div>
+      <div class="exp-desc">Responsible for developing responsive and user-friendly web applications, building modern UI components, and collaborating with cross-functional teams to deliver exceptional digital experiences.</div>
+      <ul class="exp-bullets">
+        <li>Developed responsive web interfaces using HTML, CSS, JavaScript, React, and Tailwind CSS</li>
+        <li>Built reusable UI components to improve application scalability and maintainability</li>
+        <li>Collaborated with designers and backend developers to implement interactive features</li>
+        <li>Optimized web pages for performance, responsiveness, and cross-browser compatibility</li>
+        <li>Maintained and updated existing web applications by fixing bugs and improving UI/UX</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section-mid">
+  <div class="container-fluid px-0">
+    <div class="sec-header reveal">
+      <div class="sec-number">04 — Projects</div>
+      <h2 class="sec-title">What I've Built</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="row g-3 mb-5">
+      <div class="col-12 reveal reveal-delay-1">
+        <div class="proj-card featured">
+          <div class="proj-num">01 — Featured</div>
+          <div class="proj-name">Hospital Management System</div>
+          <div class="proj-desc">An e-commerce-based web application to streamline hospital administration. Features 9 role-based access panels — Super Admin, Admin, Doctor, Pharmacist, Pathologist, Radiologist, Accountant, Receptionist, and Nurse — ensuring efficient management of all hospital activities.</div>
+          <div>
+            <span class="proj-tag">React</span>&nbsp;<span class="proj-tag">Role-based Access</span>&nbsp;<span class="proj-tag">REST API</span>
+          </div>
+        </div>
+      </div>
+
+        
+      
+      <div class="col-md-6 reveal reveal-delay-3">
+        <div class="proj-card">
+          <div class="proj-num">03</div>
+          <div class="proj-name">Library Management System</div>
+          <div class="proj-desc">Practice project using HTML, CSS, Bootstrap, and JavaScript. Stores book data via browser Local Storage with a clean interface for managing library records.</div>
+          <div>
+            <span class="proj-tag">HTML</span>&nbsp;<span class="proj-tag">Bootstrap</span>&nbsp;<span class="proj-tag">JS</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 reveal reveal-delay-4">
+        <div class="proj-card">
+          <div class="proj-num">04</div>
+          <div class="proj-name">Lens &amp; Lights Media</div>
+          <div class="proj-desc">Responsive advertisement landing page with modern design using HTML, CSS, and JavaScript.</div>
+          <div>
+            <span class="proj-tag">Landing Page</span>&nbsp;<span class="proj-tag">HTML/CSS/JS</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 reveal reveal-delay-5">
+        <div class="proj-card">
+          <div class="proj-num">05</div>
+          <div class="proj-name">Securxperts Ad Website</div>
+          <div class="proj-desc">Company advertisement landing page built with responsive HTML, CSS, and JavaScript for SecurXperts Technologies.</div>
+          <div>
+            <span class="proj-tag">Landing Page</span>&nbsp;<span class="proj-tag">HTML/CSS/JS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Personal Work Showcase -->
+    <div class="sec-header reveal" style="margin-top: 60px !important;">
+      <div class="sec-number">Personal Work</div>
+      <h2 class="sec-title" style="font-size: 1.8rem;">Interactive Playground</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="row g-3">
+      <div class="col-md-6 reveal reveal-delay-2">
+        <div class="proj-card personal">
+          <span class="proj-badge personal-badge"><i class="bi bi-person-fill"></i> Personal Work</span>
+          <div class="proj-num">01</div>
+          <div class="proj-name">Archery Game</div>
+          <div class="proj-desc">A premium, highly interactive sports game styled in deep forest green and gold. Features 20 starting arrows, collision particle systems, and haptic vibration effects on bullseyes.</div>
+          <div>
+            <span class="proj-tag">HTML</span>&nbsp;<span class="proj-tag">CSS</span>&nbsp;<span class="proj-tag">JS</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://grshetty.github.io/ArcheryGame/" target="_blank" class="proj-link">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 reveal reveal-delay-3">
+        <div class="proj-card personal">
+          <span class="proj-badge personal-badge"><i class="bi bi-person-fill"></i> Personal Work</span>
+          <div class="proj-num">02</div>
+          <div class="proj-name">Snake Game</div>
+          <div class="proj-desc">A classic arcade recreation featuring responsive grid mechanics, speed levels, food spawning algorithms, high score persistence, and dynamic collision handlers.</div>
+          <div>
+            <span class="proj-tag">HTML</span>&nbsp;<span class="proj-tag">CSS</span>&nbsp;<span class="proj-tag">JS</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://grshetty.github.io/SnakeGame/" target="_blank" class="proj-link">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 reveal reveal-delay-4">
+        <div class="proj-card personal">
+          <span class="proj-badge personal-badge"><i class="bi bi-person-fill"></i> Personal Work</span>
+          <div class="proj-num">03</div>
+          <div class="proj-name">Animated Login Form</div>
+          <div class="proj-desc">A premium UI/UX concept featuring a modern interactive login panel with glassmorphism layout, floating label states, hover glow transitions, and dynamic input focus effects.</div>
+          <div>
+            <span class="proj-tag">HTML</span>&nbsp;<span class="proj-tag">CSS</span>&nbsp;<span class="proj-tag">JS</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://grshetty.github.io/AnimatedLoginForm/" target="_blank" class="proj-link">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 reveal reveal-delay-5">
+        <div class="proj-card personal">
+          <span class="proj-badge personal-badge"><i class="bi bi-person-fill"></i> Personal Work</span>
+          <div class="proj-num">04</div>
+          <div class="proj-name">Secured Login Form</div>
+          <div class="proj-desc">A secure login system implementing solid VAPT guidelines: input sanitation, secure password visibility controls, client-side encryption simulation, and response validation.</div>
+          <div>
+            <span class="proj-tag">HTML</span>&nbsp;<span class="proj-tag">CSS</span>&nbsp;<span class="proj-tag">JS</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://grshetty.github.io/loginform/" target="_blank" class="proj-link">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section-dark">
+  <div class="container-fluid px-0">
+    <div class="sec-header reveal">
+      <div class="sec-number">05 — Education</div>
+      <h2 class="sec-title">Academic Background</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="edu-item reveal reveal-delay-1">
+      <div class="edu-dot">UG</div>
+      <div>
+        <div class="edu-school">Parul University</div>
+        <div class="edu-degree">B.Tech CSE (Computer Science &amp; Engineering)</div>
+        <div class="edu-year">2021 — 2025</div>
+      </div>
+    </div>
+    <div class="edu-item reveal reveal-delay-2">
+      <div class="edu-dot">12</div>
+      <div>
+        <div class="edu-school">Ignite Intermediate College</div>
+        <div class="edu-degree">MPC (Mathematics, Physics, Chemistry)</div>
+        <div class="edu-year">2019 — 2021</div>
+      </div>
+    </div>
+    <div class="edu-item reveal reveal-delay-3">
+      <div class="edu-dot">10</div>
+      <div>
+        <div class="edu-school">Bhashayam Blooms</div>
+        <div class="edu-degree">SSC</div>
+        <div class="edu-year">2019</div>
+      </div>
+    </div>
+    <!-- Soft Skills -->
+    <div class="sec-header reveal" style="margin-top:55px;margin-bottom:24px">
+      <div class="sec-number">Soft Skills</div>
+      <h2 class="sec-title" style="font-size:1.8rem">Personal Strengths</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="skills-row reveal reveal-delay-1" style="gap: 12px; margin-top: 15px;">
+      <div class="skill-pill">Leadership</div>
+      <div class="skill-pill">Communication</div>
+      <div class="skill-pill">Creative Thinking</div>
+    </div>
+  </div>
+</section>
+
+<!-- CHATBOT / CONTACT -->
+<section id="contact" class="chatbot-section">
+  <div class="container-fluid px-0">
+    <div class="sec-header reveal" style="text-align:center;margin-bottom:40px">
+      <div class="sec-number" style="text-align:center">06 — Contact</div>
+      <h2 class="sec-title" style="text-align:center">Let's Talk</h2>
+      <div class="sec-line" style="margin:14px auto 0"></div>
+    </div>
+    
+    <!-- Contact Links -->
+    <div class="contact-links reveal reveal-delay-1" style="text-align:center;margin-bottom:40px">
+      <a href="https://www.linkedin.com/in/ruthveek-gourishetty-435154264" target="_blank" class="contact-link-btn">
+        <i class="bi bi-linkedin"></i>
+        LinkedIn
+      </a>
+      <a href="https://github.com/Grshetty" target="_blank" class="contact-link-btn">
+        <i class="bi bi-github"></i>
+        GitHub
+      </a>
+    </div>
+    <div class="chat-container reveal reveal-delay-1">
+      <div class="chat-window">
+        <div class="chat-topbar">
+          <div class="chat-avatar">RG</div>
+          <div class="chat-info">
+            <div class="name">Ruthveek's Assistant</div>
+            <div class="status">● Online now</div>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="quick-replies-wrap" id="quickReplies"></div>
+        <div class="chat-input-bar">
+          <input class="chat-input" id="chatInput" placeholder="Type a message..." autocomplete="off"/>
+          <button class="chat-send-btn" id="chatSend">
+            <i class="bi bi-send"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Designed &amp; Built by <span>Ruthveek Gourishetty</span> — <span>2026</span></p>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+  <i class="bi bi-caret-up-fill"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
