@@ -6,8 +6,6 @@ const phrases = [
   'Tailwind CSS',
   'Bootstrap',
   'WordPress',
-  'REST API Integration',
-  'SQL Databases',
   'Git & GitHub'
 ];
 let pi = 0, ci = 0, deleting = false;
@@ -28,9 +26,9 @@ function typeHero() {
 setTimeout(typeHero, 1400);
 
 // ── SKILL PILLS TYPEWRITER ──
-const feSkills = ['React.js', 'TypeScript', 'HTML5', 'CSS3', 'Bootstrap', 'JavaScript', 'Tailwind CSS', 'WordPress'];
+const feSkills = ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'React.js', 'Tailwind CSS', 'Next.js', 'WordPress'];
 const biSkills = ['REST API'];
-const dbSkills = ['SQL', 'Git', 'GitHub'];
+const dbSkills = ['Git', 'GitHub', 'Vercel'];
 
 function renderSkills(containerId, skills) {
   const el = document.getElementById(containerId);
