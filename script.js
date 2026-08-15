@@ -152,7 +152,7 @@ function handleInput(text) {
       );
     } else if (l.includes('personal') || l.includes('work') || l.includes('game') || l.includes('snake') || l.includes('archery') || l.includes('login')) {
       botReply(
-        `Ruthveek has built 4 interactive personal projects:<br><br>• <strong>Archery Game</strong><br>• <strong>Snake Game</strong><br>• <strong>Animated Login Form</strong><br>• <strong>Secured Login Form</strong><br><br>These projects highlight advanced canvas operations, gameplay mechanics, micro-interactions, responsive styling, and form input validation.`,
+        `Ruthveek has built 4 interactive personal projects:<br><br>• <strong>Archery Game</strong><br>• <strong>Snake Game</strong><br>• <strong>Animated Login Form</strong><br>•  <strong>Secured Login Form</strong><br> • <strong>Sales Register </strong><br> • <strong>Road Crossing Game </strong><br>  • <strong>Trinetra - Shopping Website</strong><br> • <strong>SkillSwapper</strong><br><br>These projects highlight advanced canvas operations, gameplay mechanics, micro-interactions, responsive styling, and form input validation.`,
         300, () => setQR(["Thanks!", "WhatsApp Contact", "Send Email", "View Projects", "View Skills"])
       );
     } else if (l.includes('skill') || l.includes('tech')) {
