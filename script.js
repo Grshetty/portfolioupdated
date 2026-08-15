@@ -158,7 +158,7 @@ function handleInput(text) {
     } else if (l.includes('skill') || l.includes('tech')) {
       botReply("Ruthveek's tech stack: <strong>React, HTML5, CSS3, Bootstrap, JavaScript, Tailwind CSS</strong> on the frontend, plus <strong>Responsive Design, API Integration, State Management</strong>, and <strong>Git, GitHub, SQL</strong> for tools!", 300, () => setQR(['WhatsApp Contact', 'Send Email', 'Personal Work', 'View Projects']));
     } else if (l.includes('project')) {
-      botReply("Ruthveek has built 8 active applications: the featured <strong>Hospital Management System</strong> (9 roles), <strong>Library Management System</strong>, beautiful landing pages (<strong>Lens & Lights Media</strong> and <strong>SecurXperts</strong>), and 4 interactive personal creations (<strong>Archery Game</strong>, <strong>Snake Game</strong>, <strong>Animated Login Form</strong>, and <strong>Login Form</strong>)!", 300, () => setQR(['WhatsApp Contact', 'Send Email', 'Personal Work', 'View Skills']));
+      botReply("Ruthveek has built 8 active applications: the featured <strong>Hospital Management System</strong> (9 roles), <strong>Library Management System</strong>,<strong>SAMS-School Management System </strong> and beautiful landing pages (<strong>Lens & Lights Media</strong> and <strong>SecurXperts</strong>)!", 300, () => setQR(['WhatsApp Contact', 'Send Email', 'Personal Work', 'View Skills']));
     } else if (l.includes('thank') || l.includes('bye')) {
       botReply("You're welcome! Feel free to reach out to Ruthveek directly. Have a great day! 👋", 300);
     } else {
