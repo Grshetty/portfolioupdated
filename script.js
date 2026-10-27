@@ -132,37 +132,50 @@ function handleInput(text) {
   clearQR();
   addMsg(text, 'user');
   const l = text.toLowerCase();
-  if (step === 1) {
+  
+  // If user immediately asked a specific topic on first message, process directly
+  const hasSpecificTopic = l.includes('dhruvantheera') || l.includes('construction') || l.includes('project') || 
+                           l.includes('personal') || l.includes('work') || l.includes('skill') || 
+                           l.includes('contact') || l.includes('email') || l.includes('phone') || 
+                           l.includes('whatsapp') || l.includes('game') || l.includes('dc') || l.includes('client');
+
+  if (step === 1 && !hasSpecificTopic) {
     step = 2;
     const res = (l.includes('good') || l.includes('great') || l.includes('fine') || l.includes('well'))
       ? "That's awesome! 🎉 How can I help you today?"
       : "Good to hear from you! How can I help today?";
-    botReply(res, 200, () => setQR(['WhatsApp Contact', 'Send Email', 'Personal Work', 'View Skills', 'View Projects']));
-  } else if (step >= 2) {
-    if (l.includes('contact') || l.includes('ruthveek') || l.includes('number') || l.includes('whatsapp') || l.includes('phone')) {
+    botReply(res, 200, () => setQR(['DHRUVANTHEERA Website', 'Personal Work', 'View Projects', 'WhatsApp Contact', 'View Skills']));
+  } else {
+    step = 2;
+    if (l.includes('dhruvantheera') || l.includes('construction') || l.includes('dhruva') || (l.includes('client') && (l.includes('project') || l.includes('site') || l.includes('work') || l.includes('web'))) || l === 'dc' || l.includes(' dc ') || l.startsWith('dc ') || l.endsWith(' dc')) {
+      botReply(
+        `<strong>DHRUVANTHEERA Constructions</strong> is a client website developed by Ruthveek! 🏗️<br><br>• Built with responsive <strong>HTML5, CSS3, &amp; JavaScript</strong><br>• Features a cinematic video intro, luxury architectural portfolio, interactive project showcases, client reviews, and an online booking &amp; enquiry system.<br><br><a class="wa-btn" href="https://grshetty.github.io/DC/" target="_blank" rel="noopener noreferrer" style="background:#085041;border:0.5px solid #5DCAA5;gap:6px"><i class="bi bi-box-arrow-up-right"></i> Visit DHRUVANTHEERA Website</a>`,
+        300, () => setQR(["Personal Work", "View Projects", "WhatsApp Contact", "Send Email", "View Skills"])
+      );
+    } else if (l.includes('contact') || l.includes('ruthveek') || l.includes('number') || l.includes('whatsapp') || l.includes('phone')) {
       step = 3;
       botReply(
         `You can reach Ruthveek directly via WhatsApp or Call!<br><br><strong style="font-size:15px;color:#5DCAA5">+91-7981227221</strong><br><br><a class="wa-btn" href="${WA}" target="_blank"><svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Chat on WhatsApp</a>`,
-        300, () => setQR(["Thanks!", "Send Email", "Personal Work", "View Projects", "View Skills"])
+        300, () => setQR(["Thanks!", "Send Email", "DHRUVANTHEERA Website", "Personal Work", "View Projects"])
       );
     } else if (l.includes('email') || l.includes('mail')) {
       botReply(
         `You can email Ruthveek directly at:<br><br><strong style="font-size:15px;color:#5DCAA5">ruthveekgourishetty@gmail.com</strong><br><br><a class="wa-btn" href="mailto:ruthveekgourishetty@gmail.com" style="background:#dd4b39;gap:6px"><i class="bi bi-envelope-fill"></i> Send Email</a>`,
-        300, () => setQR(["Thanks!", "WhatsApp Contact", "Personal Work", "View Projects", "View Skills"])
+        300, () => setQR(["Thanks!", "WhatsApp Contact", "DHRUVANTHEERA Website", "Personal Work", "View Projects"])
       );
     } else if (l.includes('personal') || l.includes('work') || l.includes('game') || l.includes('snake') || l.includes('archery') || l.includes('login')) {
       botReply(
-        `Ruthveek has built 4 interactive personal projects:<br><br>• <strong>Archery Game</strong><br>• <strong>Snake Game</strong><br>• <strong>Animated Login Form</strong><br>•  <strong>Secured Login Form</strong><br> • <strong>Sales Register </strong><br> • <strong>Road Crossing Game </strong><br>  • <strong>Trinetra - Shopping Website</strong><br> • <strong>SkillSwapper</strong><br><br>These projects highlight advanced canvas operations, gameplay mechanics, micro-interactions, responsive styling, and form input validation.`,
-        300, () => setQR(["Thanks!", "WhatsApp Contact", "Send Email", "View Projects", "View Skills"])
+        `Ruthveek has built 9+ interactive personal and client projects:<br><br>• <strong><a href="https://grshetty.github.io/DC/" target="_blank" rel="noopener noreferrer" style="color:#5DCAA5;text-decoration:none">DHRUVANTHEERA Constructions <i class="bi bi-box-arrow-up-right" style="font-size:11px"></i></a></strong> (Client Website)<br>• <strong><a href="https://skill-swapper-seven.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:#5DCAA5;text-decoration:none">SkillSwapper <i class="bi bi-box-arrow-up-right" style="font-size:11px"></i></a></strong><br>• <strong><a href="https://my-app-gilt-nu-80.vercel.app/" target="_blank" rel="noopener noreferrer" style="color:#5DCAA5;text-decoration:none">Trinetra - Shopping Website <i class="bi bi-box-arrow-up-right" style="font-size:11px"></i></a></strong><br>• <strong><a href="https://grshetty.github.io/SalesRegister/" target="_blank" rel="noopener noreferrer" style="color:#5DCAA5;text-decoration:none">Sales Register <i class="bi bi-box-arrow-up-right" style="font-size:11px"></i></a></strong><br>• <strong><a href="https://grshetty.github.io/ArcheryGame/" target="_blank" rel="noopener noreferrer" style="color:#5DCAA5;text-decoration:none">Archery Game <i class="bi bi-box-arrow-up-right" style="font-size:11px"></i></a></strong><br>• <strong><a href="https://grshetty.github.io/SnakeGame/" target="_blank" rel="noopener noreferrer" style="color:#5DCAA5;text-decoration:none">Snake Game <i class="bi bi-box-arrow-up-right" style="font-size:11px"></i></a></strong><br>• <strong><a href="https://grshetty.github.io/RoadCrossGame/" target="_blank" rel="noopener noreferrer" style="color:#5DCAA5;text-decoration:none">Road Crossing Game <i class="bi bi-box-arrow-up-right" style="font-size:11px"></i></a></strong><br>• <strong><a href="https://grshetty.github.io/AnimatedLoginForm/" target="_blank" rel="noopener noreferrer" style="color:#5DCAA5;text-decoration:none">Animated Login Form <i class="bi bi-box-arrow-up-right" style="font-size:11px"></i></a></strong><br>• <strong><a href="https://grshetty.github.io/loginform/" target="_blank" rel="noopener noreferrer" style="color:#5DCAA5;text-decoration:none">Secured Login Form <i class="bi bi-box-arrow-up-right" style="font-size:11px"></i></a></strong><br><br>These projects highlight responsive layouts, modern UI/UX design, canvas operations, micro-interactions, and client-tailored solutions.`,
+        300, () => setQR(["DHRUVANTHEERA Website", "WhatsApp Contact", "Send Email", "View Projects", "View Skills"])
       );
     } else if (l.includes('skill') || l.includes('tech')) {
-      botReply("Ruthveek's tech stack: <strong>React, HTML5, CSS3, Bootstrap, JavaScript, Tailwind CSS</strong> on the frontend, plus <strong>Responsive Design, API Integration, State Management</strong>, and <strong>Git, GitHub, SQL</strong> for tools!", 300, () => setQR(['WhatsApp Contact', 'Send Email', 'Personal Work', 'View Projects']));
+      botReply("Ruthveek's tech stack: <strong>React, HTML5, CSS3, Bootstrap, JavaScript, Tailwind CSS</strong> on the frontend, plus <strong>Responsive Design, API Integration, State Management</strong>, and <strong>Git, GitHub, SQL</strong> for tools!", 300, () => setQR(['DHRUVANTHEERA Website', 'Personal Work', 'WhatsApp Contact', 'Send Email', 'View Projects']));
     } else if (l.includes('project')) {
-      botReply("Ruthveek has built 8 active applications: the featured <strong>Hospital Management System</strong> (9 roles), <strong>Library Management System</strong>,<strong>SAMS-School Management System </strong> and beautiful landing pages (<strong>Lens & Lights Media</strong> and <strong>SecurXperts</strong>)!", 300, () => setQR(['WhatsApp Contact', 'Send Email', 'Personal Work', 'View Skills']));
+      botReply("Ruthveek has built 9+ active applications including client work like <strong><a href='https://grshetty.github.io/DC/' target='_blank' rel='noopener noreferrer' style='color:#5DCAA5;text-decoration:none'>DHRUVANTHEERA Constructions <i class='bi bi-box-arrow-up-right' style='font-size:11px'></i></a></strong>, the featured <strong>Hospital Management System</strong> (9 roles), <strong>SAMS-School Management System</strong>, <strong>Library Management System</strong>, and beautiful landing pages (<strong>Lens &amp; Lights Media</strong> and <strong>SecurXperts</strong>)!", 300, () => setQR(['DHRUVANTHEERA Website', 'Personal Work', 'WhatsApp Contact', 'Send Email', 'View Skills']));
     } else if (l.includes('thank') || l.includes('bye')) {
       botReply("You're welcome! Feel free to reach out to Ruthveek directly. Have a great day! 👋", 300);
     } else {
-      botReply("I can help you contact Ruthveek, or tell you about his skills, personal work, and projects. What would you like to know?", 300, () => setQR(['WhatsApp Contact', 'Send Email', 'Personal Work', 'View Skills', 'View Projects']));
+      botReply("I can help you explore Ruthveek's client work like <strong>DHRUVANTHEERA Constructions</strong>, his personal projects, skills, or get in touch. What would you like to know?", 300, () => setQR(['DHRUVANTHEERA Website', 'Personal Work', 'View Projects', 'WhatsApp Contact', 'View Skills']));
     }
   }
 }
